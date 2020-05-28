@@ -30,8 +30,8 @@ Create a page that
 
 1. contains 3 sections (one for each of the following)
 2. displays the current time
-2. contains a start/stop button with a stopwatch which starts at 00:00 and continues until the user clicks "stop"
-3. contains a timer where the user can enter a number of seconds, click start and the timer counts down to 0. There should be a sound announcingthe end as well.
+3. contains a start/stop button with a stopwatch which starts at 00:00 and continues until the user clicks "stop"
+4. contains a timer where the user can enter a number of seconds, click start and the timer counts down to 0. There should be a sound announcingthe end as well.
 
 ## Exercise 3.1 to 3.3 - All about Buttons!
 
@@ -39,13 +39,14 @@ Create more buttons than anyone could possibly ever handle...
 
 ## Exercise 4 - Is This All a Game to You?!
 
-Create a game that makes the suer click and click and click.
+Create a game that makes the user click and click and click.
 
-## Exercise 5 - The Big Bad Showdown
+## Exercise 5 (Stretch) - Create your own game!
 
-This is most likely a full day exercise.
+Choose one of the following games and build it!
 
-1. Reproduce the game as described in the exercise folder
-2. If you havve time and inclination, change the theme of the game to something you prefer.
+- Hangman
+- Tic-tac-toe
+- [Simon](https://youtu.be/1Yqj76Q4jJ4)
 
-## Exercise 6 (Challenge) - Create your own game!
+Have another idea? Let's hear it! 😃
