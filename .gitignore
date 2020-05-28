@@ -1,2 +1,13 @@
+# OSX
+**/.DS_Store
 .DS_Store
-.vscode
+*.swp
+*~.nib
+# Thumbnails
+._*
+
+# Windows
+# Windows image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
