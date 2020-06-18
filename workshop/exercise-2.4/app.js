@@ -72,6 +72,7 @@ let updateCountdown = () => {
         countdown.style.color = 'rgb(255, 230, 0)';
         clearInterval(timer)
         endgameMsg.innerHTML = won ? 'You Win!!!!' : 'You Lose...';
+        endgameMsg.style.backgroundColor = won ? CLICKED_COLOR : UNCLICKED_COLOR;
         endgameMsg.style.visibility = 'visible';
     }
     countdown.innerHTML = TIME--;
@@ -90,7 +91,6 @@ endgameMsg.style.display = 'flex';
 endgameMsg.style.justifyContent = 'center';
 endgameMsg.style.alignItems = 'center';
 endgameMsg.style.borderRadius = '10px';
-endgameMsg.style.backgroundColor = won ? UNCLICKED_COLOR : CLICKED_COLOR;
 endgameMsg.style.zIndex = 1;
 endgameMsg.style.position = 'absolute';
 endgameMsg.style.top = `${(game.offsetHeight / 2) - 100}px`;
