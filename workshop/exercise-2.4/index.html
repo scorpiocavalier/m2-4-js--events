@@ -8,6 +8,11 @@
         --time-section-bg-color: gray;
       }
 
+      @keyframes numberAnimation {
+        from { font-size: 5rem; opacity: 1; }
+        to { font-size: 3rem; opacity: 0; }
+      }
+
       .main, .timer-section, .game-section,
       .timer {
         display: flex;
@@ -26,6 +31,7 @@
       .timer {
         width: 20%;
         height: 80%;
+        position: relative;
       }
       .start{
         height: 70%;
@@ -34,6 +40,7 @@
         color: var(--time-section-bg-color);
         font-size: 30px;
         visibility: visible;
+        z-index: 1;
         transition: height 0.3s, width 0.3s, visibility 0.3s ease-out;
       }
       .start:hover {
@@ -45,6 +52,15 @@
       .start:focus {
         /* for accessibility */
         outline: 1px solid var(--button-color);
+      }
+      .countdown {
+        position: absolute;
+        font-size: 5rem;
+        font-weight: 900;
+        color: white;
+        animation: numberAnimation 1s ease-in-out;
+        animation-iteration-count: 6;
+        animation-play-state: paused;
       }
 
       .game-section {
@@ -66,6 +82,7 @@
       <div class="timer-section">
         <div class="timer">
           <button class="start">Start</button>
+          <span class='countdown'></span>
         </div>
       </div>
       <div class="game-section">

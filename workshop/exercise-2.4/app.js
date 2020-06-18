@@ -4,6 +4,7 @@ const FONT_COLOR = 'white';
 const FONT_SIZE = '30px';
 const FONT_WEIGHT = '700';
 const token_SIDE_LENGTH = '100';
+let TIME = 5;
 
 const game = document.querySelector('.game');
 const gameSection = document.querySelector('.game-section');
@@ -38,15 +39,35 @@ for(let i = 1; i <= 20; i++) {
 
 document.querySelector('.game-section').appendChild(game);
 
-// Add event handler for start button
+// Add event handler for start button.
 let start_btn = document.querySelector('.start');
 
-let disappear = () => {
+let startGame = () => {
+    // Disappearing button effect.
     start_btn.style.width = '100%';
     start_btn.style.height = '100%';
     start_btn.style.visibility = 'hidden';
+
+    // Start countdown.
+    startCountdown();
 }
 
-start_btn.addEventListener('click', disappear);
+start_btn.addEventListener('click', startGame);
 
-// Start timer
+// Start countdown after button pressed.
+let countdown = document.querySelector('.countdown');
+let timer;
+let updateCountdown = () => {
+    if(TIME == 0) {
+        countdown.style.color = 'rgb(255, 230, 0)';
+        clearInterval(timer)
+        // alert('GAME OVER');
+    }
+    countdown.innerHTML = TIME--;
+}
+let startCountdown = () => {
+    countdown.style.animationPlayState = 'running';
+    timer = setInterval(updateCountdown, 1000);
+}
+
+// Show end of game message.
