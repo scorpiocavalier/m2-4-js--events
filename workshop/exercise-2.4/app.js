@@ -36,5 +36,17 @@ for(let i = 1; i <= 20; i++) {
     game.appendChild(token);
 }
 
-console.log();
 document.querySelector('.game-section').appendChild(game);
+
+// Add event handler for start button
+let start_btn = document.querySelector('.start');
+
+let disappear = () => {
+    start_btn.style.width = '100%';
+    start_btn.style.height = '100%';
+    start_btn.style.visibility = 'hidden';
+}
+
+start_btn.addEventListener('click', disappear);
+
+// Start timer

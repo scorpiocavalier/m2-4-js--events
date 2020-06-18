@@ -3,6 +3,11 @@
   <head>
     <title>Exercise 2.4</title>
     <style>
+      :root {
+        --button-color: rgb(255, 230, 0);
+        --time-section-bg-color: gray;
+      }
+
       .main, .timer-section, .game-section,
       .timer {
         display: flex;
@@ -16,18 +21,30 @@
       .timer-section {
         width: 100%;
         height: 10vh;
-        background-color: grey;
+        background-color: var(--time-section-bg-color);
       }
       .timer {
         width: 20%;
         height: 80%;
       }
       .start{
-        height: 100%;
-        width: 100%;
-        background-color: rgb(255, 230, 0);
-        color: gray;
+        height: 70%;
+        width: 70%;
+        background-color: var(--button-color);
+        color: var(--time-section-bg-color);
         font-size: 30px;
+        visibility: visible;
+        transition: height 0.3s, width 0.3s, visibility 0.3s ease-out;
+      }
+      .start:hover {
+        border: 3px solid var(--button-color);
+        background-color: var(--time-section-bg-color);
+        color: white;
+        cursor: pointer;
+      }
+      .start:focus {
+        /* for accessibility */
+        outline: 1px solid var(--button-color);
       }
 
       .game-section {
