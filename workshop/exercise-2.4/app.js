@@ -5,11 +5,10 @@ const FONT_SIZE = '30px';
 const FONT_WEIGHT = '700';
 const token_SIDE_LENGTH = '100px';
 
-let grid = document.createElement('div');
-grid.style.width = '100%';
+const game = document.querySelector('.game');
 
 for(let i = 1; i <= 20; i++) {
-    let token = document.createElement('div');
+    const token = document.createElement('div');
     token.style.width = token_SIDE_LENGTH;
     token.style.height = token_SIDE_LENGTH;
     token.style.backgroundColor = UNCLICKED_COLOR;
@@ -17,9 +16,9 @@ for(let i = 1; i <= 20; i++) {
     token.style.fontSize = FONT_SIZE;
     token.style.fontWeight = FONT_WEIGHT;
     token.style.borderRadius = '50%';
-    token.style.position = 'absolute';
-    token.style.top = `${Math.floor(Math.random() * 800)}px`;
-    token.style.left = `${Math.floor(Math.random() * 1000)}px`;
+    token.style.position = 'relative';
+    token.style.top = `${Math.floor(Math.random() * 300)}px`;
+    token.style.left = `${Math.floor(Math.random() * 300)}px`;
     token.style.display = 'flex';
     token.style.justifyContent = 'center';
     token.style.alignItems = 'center';
@@ -30,7 +29,7 @@ for(let i = 1; i <= 20; i++) {
         token.style.backgroundColor = (currentColor == CLICKED_COLOR) ? UNCLICKED_COLOR : CLICKED_COLOR;
     });
 
-    grid.appendChild(token);
+    // game.appendChild(token);
 }
 
-document.querySelector('.main').appendChild(grid);
+document.querySelector('.game-section').appendChild(game);
