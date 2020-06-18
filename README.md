@@ -4,6 +4,8 @@ If you are unsure of what the outcome is supposed to be, you can always launch t
 
 ## Exercise 1.0 - Warm up
 
+<img src="__lecture/assets/exercise-1.0.gif" />
+
 Write an app that registers a click anywhere on the screen.
 Once the user clicks, add some text to the page.
 
@@ -27,6 +29,8 @@ Hints:
 
 ## Exercise 1.1 - Warmer
 
+<img src="__lecture/assets/exercise-1.1.gif" />
+
 _no copy/pasting_
 
 Write an app that gives the user 1s (or 1000ms) to click anywhere on the screen.
@@ -41,6 +45,8 @@ Hints:
 - You'll need a flag (variable containing a boolean) to keep track of whether the user has won or lost.
 
 ## Exercise 1.2 - Counting down!
+
+<img src="__lecture/assets/exercise-1.2.gif" />
 
 _no copy/pasting_
 
@@ -61,17 +67,23 @@ In short, replicate (and I do mean, REWRITE it from scratch) the last exercise, 
 
 ## Exercise 2.1 - Buttons!!
 
+<img src="__lecture/assets/exercise-2.1.gif" />
+
 Write an app that generates 20 red buttons.
 
 When the user clicks a button it should become green.
 
 ## Exercise 2.2 - Red to Green to Red again.
 
+<img src="__lecture/assets/exercise-2.2.gif" />
+
 Building on exercise 2.1, write a program that places 20 red buttons on the page. When clicked, buttons should turn green, but this time clicking on a green button should turn it back to red.
 
 I strongly recommend redoing the JS from scratch without looking at your previous answer as mush as possible.
 
 ## Exercise 2.3 - Buttons Here, Buttons There, Buttons Everywhere!
+
+<img src="__lecture/assets/exercise-2.3.gif" />
 
 Building on exercise 2.1 and 2.2, write a program that places 20 buttons in the page that toggle from red to green but this time they are located in random positions on the screen.
 
@@ -89,6 +101,8 @@ I strongly recommend redoing the JS from scratch without looking at your previou
 ---
 
 ## Exercise 2.4 - Is This All just a Game to You?!
+
+<img src="__lecture/assets/exercise-2.4.gif" />
 
 Building on all of the exercises done so far, write a program that
 
