@@ -4,44 +4,153 @@ If you are unsure of what the outcome is supposed to be, you can always launch t
 
 ## Exercise 1.0 - Warm up
 
-Write an app that registers a click anywhere on the screen. Once the user clicks, let them know that they did it!
+Write an app that registers a click anywhere on the screen.
+Once the user clicks, add some text to the page.
+
+Hints:
+
+- Target the `<body>`
+- By default, the `<body>` will be 0px tall. Add this into the `head` of the `index.html` file.
+
+```html
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
+```
 
 ## Exercise 1.1 - Warmer
 
 _no copy/pasting_
 
-Write an app that gives the user 1s (or 1000ms) to click anywhere on the screen. If they click inside of the required time, you should tell them that they've won, else let them know that they've lost.
+Write an app that gives the user 1s (or 1000ms) to click anywhere on the screen.
+
+If they click within the required time, you should tell them that they've won,
+else let them know that they've lost.
+
+Hints:
+
+- Target the `<body>`
+- `setTimout` is your friend.
+- You'll need a flag (variable containing a boolean) to keep track of whether the user has won or lost.
 
 ## Exercise 1.2 - Counting down!
 
 _no copy/pasting_
 
-Similar to the last exercise, write an app that gives the user a random amount of time (up to 5 seconds) to click anywhere on the screen.
+Similar to the last exercise, write an app that gives the user
+a random amount of time (up to 5 seconds) to click anywhere on the screen.
 
-But this time, let's let the user know how much time they have to actually 'click'. If they click inside of the required time, you should tell them that they've won, else let them know that they've lost.
+But this time, let's let the user know how much time they have to actually 'click'.
 
-## Exercise 2 - The Final Countdown... Clock... and Timer.
+If they click within the required time, you should tell them that they've won,
+else let them know that they've lost.
 
-_Remember that optional exercise from yesterday..._
+In short, replicate (and I do mean, REWRITE it from scratch) the last exercise, and add
 
-**Note:** If you skipped the challenge question yesterday, take a quick look at it, but you don't have to complete it to do this one. I fully expect everyone to start from scratch!
+- random amount of time to click
+- tell the user how much time they have to click.
 
-Create a page that
+**Challenge:** Make the countdown live (update on the screen)...
 
-1. contains 3 sections (one for each of the following)
-2. displays the current time
-3. contains a start/stop button with a stopwatch which starts at 00:00 and continues until the user clicks "stop"
-4. contains a timer where the user can enter a number of seconds, click start and the timer counts down to 0. There should be a sound announcingthe end as well.
+## Exercise 2.1 - Buttons!!
 
-## Exercise 3.1 to 3.3 - All about Buttons!
+Write an app that generates 20 red buttons.
 
-Create more buttons than anyone could possibly ever handle...
+When the user clicks a button it should become green.
 
-## Exercise 4 - Is This All a Game to You?!
+## Exercise 2.2 - Red to Green to Red again.
 
-Create a game that makes the user click and click and click.
+Building on exercise 2.1, write a program that places 20 red buttons on the page. When clicked, buttons should turn green, but this time clicking on a green button should turn it back to red.
 
-## Exercise 5 (Stretch) - Create your own game!
+I strongly recommend redoing the JS from scratch without looking at your previous answer as mush as possible.
+
+## Exercise 2.3 - Buttons Here, Buttons There, Buttons Everywhere!
+
+Building on exercise 2.1 and 2.2, write a program that places 20 buttons in the page that toggle from red to green but this time they are located in random positions on the screen.
+
+### HINT
+
+- You can use `position: absolute`, `top`, and `left` to control where the buttons are located.
+- You can use inline styles (eg. `node.style.position = 'absolute'`)
+
+I strongly recommend redoing the JS from scratch without looking at your previous answer as mush as possible.
+
+---
+
+<center>🟡 - Minimally complete workshop (75%) - 🟡</center>
+
+---
+
+## Exercise 2.4 - Is This All just a Game to You?!
+
+Building on all of the exercises done so far, write a program that
+
+- on load, there is only a 'Start' button
+- clicking on the start button
+  - deletes the button
+  - creates a random number of buttons on the screen.
+- These buttons need to all be clicked within a given amount of time.
+
+If the user is successful, show a congratulatory message! They've won the game!!
+
+### Note
+
+- Once the user clicks all of the buttons, the game ends.
+- Once the game ends, the buttons no longer change change color (remove the event listeners).
+
+### B-E-A-U-TIFUL
+
+Don't forget to take some time to make it pretty.
+
+## Exercise 3.1 - A Clock
+
+Create a page that displays the current time
+
+### HINT
+
+- https://www.w3schools.com/js/js_dates.asp
+- https://www.digitalocean.com/community/tutorials/understanding-date-and-time-in-javascript
+
+## Exercise 3.2 - A Stopwatch
+
+Create a page that contains a start/stop button which starts/stops a stopwatch that displays seconds.
+
+### HINT
+
+- `setInterval()` and `clearInterval()`
+
+### Bonus
+
+Make it more like an actual stopwatch where it counts the seconds and the minutes (`00:00`).
+
+---
+
+<center>🟢 - Complete workshop (100%) - 🟢</center>
+
+---
+
+## Exercise 3.3 (stretch) - A Timer
+
+Create a page that contains a timer where the user can enter a number of seconds, click start and the timer counts down to 0.
+
+There should be a sound announcing the end as well.
+
+For the sound file, you can use `chime.mp3` in this directory.
+
+More info on playing sounds on the web: https://www.w3schools.com/graphics/game_sound.asp
+
+### Make it look "decent"
+
+Be as creative as you like. It doesn't need to be complicated, just a little "purty."
+
+## Exercise 4 (stretch) - Create your own game!
 
 Choose one of the following games and build it!
 
