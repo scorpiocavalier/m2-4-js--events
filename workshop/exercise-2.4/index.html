@@ -3,7 +3,8 @@
   <head>
     <title>Exercise 2.4</title>
     <style>
-      .main, .timer-section, .game-section {
+      .main, .timer-section, .game-section,
+      .timer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,9 +19,15 @@
         background-color: grey;
       }
       .timer {
-        width: 25%;
+        width: 20%;
         height: 80%;
-        background-color: blue;
+      }
+      .start{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(255, 230, 0);
+        color: gray;
+        font-size: 30px;
       }
 
       .game-section {
@@ -33,12 +40,15 @@
         height: 80%;
         background-color: blue;
       }
+
     </style>
   </head>
   <body>
     <div class="main" id="main">
       <div class="timer-section">
-        <div class="timer"></div>
+        <div class="timer">
+          <button class="start">Start</button>
+        </div>
       </div>
       <div class="game-section">
         <div class="game"></div>
