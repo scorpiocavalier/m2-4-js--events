@@ -2,10 +2,47 @@
 <html>
   <head>
     <title>Exercise 3.2</title>
-    <style></style>
+    <style>
+      body, h1 {
+        margin: 0;
+      }
+      body, .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+      }
+      button {
+        padding: 1em;
+        border-radius: 10px;
+        text-decoration: none;
+        outline: none;
+        background-color: darkblue;
+        color: white;
+        font-size: 3rem;
+      }
+      span {
+        font-size: 6rem;
+        margin: 0.5em;
+        color: white;
+        padding: 0.5em;
+        background-color: darkblue;
+      }
+      h1 {
+        font-size: 6rem;
+      }
+    </style>
   </head>
   <body>
-    <div class="main" id="main"></div>
+    <div class="main" id="main">
+      <h1>Stopwatch</h1>
+      <span id='stopwatch'></span>
+      <button id='btn'></button>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
