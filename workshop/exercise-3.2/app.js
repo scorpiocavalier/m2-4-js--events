@@ -5,13 +5,15 @@ let seconds = 0;
 
 let stopwatch = document.querySelector('#stopwatch');
 
-let button = document.querySelector('#btn');
+const button = document.querySelector('#btn');
 
 let updateWatch = () => stopwatch.innerHTML = `${hours}:${minutes}:${seconds}`;
 
-let start = () => setInterval(startCount, 1000);
+let id = null;    
 
-let stop = () => clearInterval(start);
+let start = () => id = setInterval(startCount, 1000);
+
+let stop = () => clearInterval(id);
 
 let handleClick = () => {
     console.log('1. paused: ', paused);
