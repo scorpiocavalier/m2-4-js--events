@@ -1,0 +1,75 @@
+:root {
+    --main-color: rgb(91, 2, 233);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body,
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+.time-container {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time-label-container {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time-label {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.numpad button {
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+.fas {
+    background-color: black;
+    color: var(--main-color);
+}
+.play-pause-btn {
+    border: none;
+    cursor: pointer;
+    margin-top: 3em;
+    visibility: hidden;
+}
+.active {
+    color: var(--main-color);
+}

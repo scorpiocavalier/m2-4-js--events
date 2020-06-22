@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exercise 3.3</title>
-    <style></style>
+    <title>Exercise 3.3 - Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/41c839dbf0.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="main" id="main"></div>
+    <div class="main" id="main">
+      <div class="time-container">
+        <span class="time" id="hours">00</span>
+        <span class="time">:</span>
+        <span class="time" id="minutes">00</span>
+        <span class="time">:</span>
+        <span class="time active" id="seconds">00</span>
+      </div>
+      <div class="time-label-container">
+        <span class="time-label">Hour</span>
+        <span class="time-label">Minute</span>
+        <span class="time-label">Second</span>
+      </div>
+      <div class="numpad"></div>
+      <button class='play-pause-btn'>
+        <i class="fas fa-6x fa-play-circle" aria-hidden="false"></i>
+      </button>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
