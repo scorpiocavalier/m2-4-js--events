@@ -1,45 +1,40 @@
 let paused = true;
-let hours = 0;
 let minutes = 0;
 let seconds = 0;
-
-let stopwatch = document.querySelector('#stopwatch');
-
-const button = document.querySelector('#btn');
-
-let updateWatch = () => stopwatch.innerHTML = `${hours}:${minutes}:${seconds}`;
-
 let id = null;    
 
-let start = () => id = setInterval(startCount, 1000);
+const formatTime = time => time < 10 ? `0${time}` : time;
 
-let stop = () => clearInterval(id);
+const updateWatch = () => document.querySelector('#stopwatch').innerHTML = `${formatTime(minutes)}:${formatTime(seconds)}`;
 
-let handleClick = () => {
-    console.log('1. paused: ', paused);
-    paused ? start() : stop();
-    paused = !paused;
-    console.log('2. paused: ', paused);
+const start = () => id = setInterval(startCount, 1000);
+
+const stop = () => clearInterval(id);
+
+const toggleBtnIcon = () => {
+    const icon = document.querySelector('i');
+    icon.classList.toggle('fa-play-circle');
+    icon.classList.toggle('fa-pause-circle');
 }
 
-let startCount = () => {
+const handleClick = () => {
+    paused ? start() : stop();
+    paused = !paused;
+    toggleBtnIcon();
+}
+
+const startCount = () => {
     seconds++;
     if(seconds == 60) {
         minutes++;
         seconds = 0;
-        if(minutes == 60) {
-            hours++;
-            minutes = 0;
-        }
     }
     updateWatch();
 }
 
-let app = () => {
+const app = () => {
     updateWatch();
-    
-    button.addEventListener('click', handleClick);
-    button.innerHTML = 'START / STOP';
+    document.querySelector('#play-pause-btn').addEventListener('click', handleClick);
 }
 
 app();
